@@ -1,0 +1,38 @@
+:root {
+  --color-gray: #757575;
+  --color-dgray: #212121;
+  --color-lgray: #ececec;
+  --color-black: #000000;
+  --color-blue: #2196f3;
+  --color-white: #ffffff;
+  --color-fon: #2f303a;
+}
+.logo {
+  font-family: ralway;
+  font-size: 26px;
+  color: var(--color-black);
+}
+.logo span {
+  color: var(--color-blue);
+}
+.hero {
+  background-color: var(--color-fon);
+  color: var(--color-white);
+  font-family: roboto;
+  font-size: 44px;
+}
+footer {
+  background-color: var(--color-fon);
+  color: var(--color-white);
+}
+footer .logo {
+  color: var(--color-white);
+}
+
+.our-team img {
+  height: 260px;
+  width: 270px;
+}
+li {
+  list-style-type: none;
+}
