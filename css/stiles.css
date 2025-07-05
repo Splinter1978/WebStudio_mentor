@@ -1,3 +1,4 @@
+
 :root {
   --color-gray: #757575;
   --color-dgray: #212121;
@@ -7,8 +8,11 @@
   --color-white: #ffffff;
   --color-fon: #2f303a;
 }
+body {
+  font-family: 'Roboto';
+}
 .logo {
-  font-family: ralway;
+  font-family: 'Raleway';
   font-size: 26px;
   color: var(--color-black);
 }
@@ -18,7 +22,7 @@
 .hero {
   background-color: var(--color-fon);
   color: var(--color-white);
-  font-family: roboto;
+  font-family: 'Roboto';
   font-size: 44px;
 }
 footer {
@@ -35,4 +39,8 @@ footer .logo {
 }
 li {
   list-style-type: none;
+}
+.about-us p, .our-team p{
+  font-weight: normal;
+  color: var(--color-gray);
 }
