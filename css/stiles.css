@@ -40,7 +40,7 @@ footer .logo {
 li {
   list-style-type: none;
 }
-.about-us p, .our-team p{
+.about-us p, .our-team p {
   font-weight: normal;
   color: var(--color-gray);
 }
