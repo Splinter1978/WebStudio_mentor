@@ -9,7 +9,14 @@
   --color-fon: #2f303a;
 }
 body {
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+}
+nav ul {
+  display: flex;
 }
 .logo {
   font-family: 'Raleway';
@@ -22,8 +29,9 @@ body {
 .hero {
   background-color: var(--color-fon);
   color: var(--color-white);
-  font-family: 'Roboto';
   font-size: 44px;
+  font-weight: 700;
+  text-align: center;
 }
 footer {
   background-color: var(--color-fon);
@@ -43,4 +51,11 @@ li {
 .about-us p, .our-team p {
   font-weight: normal;
   color: var(--color-gray);
+}
+.about-us ul, .we-do-this ul, .our-team ul {
+  display: flex;
+  justify-content: center;
+}
+.portfolio ul {
+  display: flex;
 }
