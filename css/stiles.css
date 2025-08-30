@@ -7,16 +7,32 @@
   --color-blue: #2196f3;
   --color-white: #ffffff;
   --color-fon: #2f303a;
+  --color-lfon: #f5f4fa;
+
 }
 body {
   font-family: 'Roboto', sans-serif;
+  font-size: 14px;
 }
-header {
+h2, h3 {
+  text-align: center;
+}
+.container {
+  max-width: 1230px;
+  margin: 0 auto;
+}
+/* header */
+header>.container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+nav {
+  flex-basis: 50%;
 }
 nav ul {
   display: flex;
+  justify-content: space-between;
 }
 .logo {
   font-family: 'Raleway';
@@ -26,6 +42,7 @@ nav ul {
 .logo span {
   color: var(--color-blue);
 }
+/* main */
 .hero {
   background-color: var(--color-fon);
   color: var(--color-white);
@@ -33,17 +50,37 @@ nav ul {
   font-weight: 700;
   text-align: center;
 }
-footer {
-  background-color: var(--color-fon);
-  color: var(--color-white);
+.about-us-item {
+  flex: 0 0 270px;
 }
-footer .logo {
-  color: var(--color-white);
+.about-us-item::before {
+content: '';
+  display: block;
+  width: 270px;
+  height: 120px;
+  background-color: var(--color-lfon);
+  background-image: url(../imgs/antenna1.png);
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 30px;
+
+}
+
+.about-us-item:nth-child(2)::before {
+  background-image: url(../imgs/clock1.png);
+}
+.about-us-item:nth-child(3)::before {
+  background-image: url(../imgs/diagram1.png);
+}
+.about-us-item:nth-child(4)::before {
+  background-image: url(../imgs/astronaut1.png);
 }
 
 .our-team img {
   height: 260px;
   width: 270px;
+  background-color: var(--color-lfon);
 }
 li {
   list-style-type: none;
@@ -51,13 +88,21 @@ li {
 .about-us p, .our-team p {
   font-weight: normal;
   color: var(--color-gray);
-  font-size: 24px;
   line-height: 1.5;
 }
 .about-us ul, .we-do-this ul, .our-team ul {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 10px;
 }
 .portfolio ul {
   display: flex;
+  flex-wrap: wrap;
+}
+footer {
+  background-color: var(--color-fon);
+  color: var(--color-white);
+}
+footer .logo {
+  color: var(--color-white);
 }
