@@ -14,15 +14,22 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
 }
-h2, h3 {
+h2 {
   text-align: center;
 }
 .container {
   max-width: 1230px;
   margin: 0 auto;
 }
+a, .button-selector {
+  cursor: pointer;
+}
+.button-selector:hover {
+  background-color: var(--color-blue);
+}
 /* header */
 header>.container {
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,21 +41,42 @@ nav ul {
   display: flex;
   justify-content: space-between;
 }
-.logo {
+.logo a, .logo a:visited {
   font-family: 'Raleway';
   font-size: 26px;
   color: var(--color-black);
+  text-decoration: none;
+
 }
 .logo span {
   color: var(--color-blue);
 }
+footer .logo span {
+  color: var(--color-white);
+}
 /* main */
 .hero {
+  height: 600px;
   background-color: var(--color-fon);
   color: var(--color-white);
+  background: url(../imgs/Img.png) center no-repeat;
+  background-size:cover;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero p {
+  max-width: 696px;
+  margin: 0 auto ;
+  padding: 0 40px;
   font-size: 44px;
   font-weight: 700;
-  text-align: center;
+  text-transform: uppercase;
+  
+}
+.about-us, .our-team,  .we-do-this{
+  padding-top: 120px;
 }
 .about-us-item {
   flex: 0 0 270px;
@@ -90,19 +118,29 @@ li {
   color: var(--color-gray);
   line-height: 1.5;
 }
-.about-us ul, .we-do-this ul, .our-team ul {
+.about-us ul, .we-do-this ul, .our-team ul, .portfolio-list{
   display: flex;
-  justify-content: space-between;
-  gap: 10px;
-}
-.portfolio ul {
-  display: flex;
+  justify-content: center;
+  gap: 20px;
   flex-wrap: wrap;
 }
+.portfolio-select {
+  max-width: 575px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.portfolio-item {
+  height: 404px;
+  flex-basis: calc((100%-40px)/3);
+}
+
 footer {
+  margin-top: 120px;
   background-color: var(--color-fon);
   color: var(--color-white);
 }
-footer .logo {
+footer .logo a, footer .logo a:visited  {
   color: var(--color-white);
 }
