@@ -21,15 +21,17 @@ h2 {
   max-width: 1230px;
   margin: 0 auto;
 }
-a, .button-selector {
+a, button, .button-selector {
   cursor: pointer;
 }
 .button-selector:hover {
   background-color: var(--color-blue);
 }
 /* header */
-header>.container {
+header {
   height: 80px;
+}
+header>.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,17 +41,18 @@ nav {
 }
 nav ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  column-gap: 50px;
 }
 .logo a, .logo a:visited {
   font-family: 'Raleway';
   font-size: 26px;
-  color: var(--color-black);
+  color: var(--color-blue);
   text-decoration: none;
 
 }
 .logo span {
-  color: var(--color-blue);
+  color: var(--color-black);
 }
 footer .logo span {
   color: var(--color-white);
@@ -59,7 +62,10 @@ footer .logo span {
   height: 600px;
   background-color: var(--color-fon);
   color: var(--color-white);
-  background: url(../imgs/Img.png) center no-repeat;
+  background: 
+  linear-gradient(0deg, rgba(47, 48, 58, 0.4), 
+  rgba(47, 48, 58, 0.4)), 
+  url(../imgs/Img.png) center no-repeat;
   background-size:cover;
   text-align: center;
   display: flex;
@@ -74,6 +80,15 @@ footer .logo span {
   font-weight: 700;
   text-transform: uppercase;
   
+}
+.hero button {
+  height: 50px;
+  width: 216px;
+  margin: 30px;
+  color: var(--color-white);
+  text-align: center;
+  border-radius: 4px;
+  background-color: var(--color-blue);
 }
 .about-us, .our-team,  .we-do-this{
   padding-top: 120px;
@@ -104,7 +119,17 @@ content: '';
 .about-us-item:nth-child(4)::before {
   background-image: url(../imgs/astronaut1.png);
 }
+.our-team {
+  background-color: #f5f4fa;
+}
 
+.team-card {
+flex: 0 0 270px;
+box-shadow: 
+0px 0px 2px 0px var(--color-gray),
+0px 2px 2px 0px var(--color-gray);
+text-align: center;
+}
 .our-team img {
   height: 260px;
   width: 270px;
@@ -121,9 +146,11 @@ li {
 .about-us ul, .we-do-this ul, .our-team ul, .portfolio-list{
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
   flex-wrap: wrap;
 }
+
+/* PORTFOLIO */
 .portfolio-select {
   max-width: 575px;
   margin: 0 auto;
@@ -134,13 +161,23 @@ li {
 .portfolio-item {
   height: 404px;
   flex-basis: calc((100%-40px)/3);
+  box-shadow: 0px 0px 1px 1px  #eeeeee;
 }
-
+.portfolio-item:hover {
+  box-shadow: 0px 0px 3px 1px  var(--color-gray);
+}
+.portfolio-item h3, .portfolio-item p {
+  margin-left: 24px;
+}
+/* FOOTER */
 footer {
+  height: 252px;
   margin-top: 120px;
   background-color: var(--color-fon);
-  color: var(--color-white);
+  color: var(--color-gray);
+  padding-top: 60px;
 }
-footer .logo a, footer .logo a:visited  {
-  color: var(--color-white);
+footer p:hover {
+color: var(--color-white);
 }
+
