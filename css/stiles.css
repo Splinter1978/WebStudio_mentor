@@ -24,6 +24,9 @@ h2 {
 a, button, .button-selector {
   cursor: pointer;
 }
+a {
+  text-decoration: none;
+}
 .button-selector:hover {
   background-color: var(--color-blue);
 }
@@ -44,15 +47,16 @@ nav ul {
   justify-content: flex-start;
   column-gap: 50px;
 }
-.nav a, nav a:visited {
-  color: var(--color-black);
-  text-decoration: none;
+.nav-item {
   position: relative;
 }
-nav a:hover, nav a:active {
+.nav a, nav a:visited {
+  color: var(--color-black);
+}
+nav a:hover {
   color: var(--color-blue);
 }
-.nav a::after {
+.nav-item::after {
     content: '';
   /* Важно, чтобы псевдоэлемент был виден */
   position: absolute;
@@ -62,7 +66,21 @@ nav a:hover, nav a:active {
   background-color: var(--color-blue);
   bottom: 0;
   left: 0;
+  /* ... базовые свойства ... */
+  transform: scaleX(0);
+  /* Линия изначально не видна */
+  transform-origin: bottom right;
+  /* Начальная точка анимации справа */
+  transition: transform 0.25s ease-out;
+  /* Плавный переход */
 }
+.nav-item:hover::after {
+  transform: scaleX(1);
+  /* При наведении линия полностью проявляется */
+  transform-origin: bottom left;
+  /* Анимация идет слева направо */
+}
+
 .logo a, .logo a:visited {
   font-family: 'Raleway';
   font-size: 26px;
@@ -200,3 +218,43 @@ footer p:hover {
 color: var(--color-white);
 }
 
+.social {
+  display: flex;
+   list-style-type: none;
+  justify-content: center;
+  align-items: center;
+height: 44px;
+width: 306px;
+margin: 0 auto;
+padding: 0;
+background-color: antiquewhite;
+gap: 5px;
+}
+.socnet {
+  background-color: aqua;
+  height: 20px;
+  width: 20px;
+  fill: #757575;
+}
+.social>li {
+  height: 44px;
+  width: 44px;
+  padding: 0px;
+  margin: 0px;
+border-radius: 100%;
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+outline: auto;
+}
+.social>li:hover {
+  background-color: #2196f3;
+}
+.socnet:hover {
+  fill: #eeeeee;
+}
+use {
+  margin: 0;
+  padding: 0;
+}
