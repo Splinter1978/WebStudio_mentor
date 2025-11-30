@@ -81,6 +81,12 @@ nav a:hover {
   /* Анимация идет слева направо */
 }
 
+.contact-head > svg {
+  height: 18px;
+  width: 18px;
+  fill: var(--color-gray);
+}
+
 .logo a, .logo a:visited {
   font-family: 'Raleway';
   font-size: 26px;
@@ -180,8 +186,28 @@ border: none;
 outline: none;
 }
 
+.mod-form-outline {
+  width: 448px;
+  height: 40px;
+  outline: 1px solid var(--color-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 15px;
+}
+.mod-form-outline svg {
+width: 18px;
+height: 18px;
+background-color: #2196f3;
+}
+.mod-form-outline input {
+  flex-grow: 1;
+  text-align: left;
+}
+
 .submit {
   display: block;
+  margin: 0 auto;
 }
 /* end model */
 .about-us, .our-team,  .we-do-this{

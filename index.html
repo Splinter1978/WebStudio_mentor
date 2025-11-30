@@ -40,6 +40,9 @@
           </ul>
         </nav>
         <div class="contact-head">
+          <svg>
+            <use href="./symbol-defs.svg#icon-envelopehover"></use>
+          </svg>
           <a href="mailto:info@devstudio.com">info@devstudio.com</a>
           <a href="tel:+380961111111">+38 096 111 11 11</a>
         </div>
@@ -57,13 +60,26 @@
     
     <div class="modal">
     <button class="btn-close" data-modal-close>&times;</button>
+    <h3>Залиште свої дані, ми вам передзвонимо</h3>
     <form action="./forrm.php" class="mod-form">
       <label for="name">Name</label>
-      <input type="text" name="name" id="name" placeholder="John" required>
+      <div class="mod-form-outline">
+        <svg><use></use></svg>
+        <input type="text" name="name" id="name" placeholder="John" required>
+      </div>
+   
       <label for="lname">Last name</label>
-      <input type="text" name="lname" id="lname" placeholder="smith">
+      <div class="mod-form-outline">
+ <svg><use></use></svg>
+ <input type="text" name="lname" id="lname" placeholder="smith">
+      </div>
+      
       <label for="name">Pass</label>
-      <input type="password" name="pass" id="pass" placeholder="****" required minlength="5" maxlength="12" title="min-5 max-12">
+      <div class="mod-form-outline">
+<svg><use></use></svg>
+<input type="password" name="pass" id="pass" placeholder="****" required minlength="5" maxlength="12" title="min-5 max-12">
+      </div>
+      
 <button class="submit" type="submit">sub</button>
     </form>
     
