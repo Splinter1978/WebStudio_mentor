@@ -13,6 +13,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/stiles.css" />
+
+    <script src="./js/modal-26.js" defer></script>
     <title>WebStudio</title>
   </head>
   <body>
@@ -48,8 +50,24 @@
       <section class="hero">
         <div class="container">
           <p>Ефективні рішення для вашого бізнесу</p>
-          <button class="button-order">Замовити послугу</button>
+          <button class="btn-open" data-modal-open>Замовити послугу</button>
         </div>
+        <!-- modalka -->
+        <div class="backdrop is-hidden" data-modal>
+    
+    <div class="modal">
+    <button class="btn-close" data-modal-close>&times;</button>
+    <form action="./forrm.php" class="mod-form">
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" placeholder="John" required>
+      <label for="lname">Last name</label>
+      <input type="text" name="lname" id="lname" placeholder="smith">
+      <label for="name">Pass</label>
+      <input type="password" name="pass" id="pass" placeholder="****" required minlength="5" maxlength="12" title="min-5 max-12">
+<button class="submit" type="submit">sub</button>
+    </form>
+    
+  </div>
       </section>
       <section class="about-us">
         <div class="container">
