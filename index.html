@@ -60,25 +60,31 @@
     
     <div class="modal">
     <button class="btn-close" data-modal-close>&times;</button>
-    <h3>Залиште свої дані, ми вам передзвонимо</h3>
+    <h3 class="modal-title">Залиште свої дані, ми вам передзвонимо</h3>
+
     <form action="./forrm.php" class="mod-form">
       <label for="name">Name</label>
       <div class="mod-form-outline">
-        <svg><use></use></svg>
+        <svg class="input_icon"><use></use></svg>
         <input type="text" name="name" id="name" placeholder="John" required>
       </div>
    
-      <label for="lname">Last name</label>
+      <label for="user_tel">Telephone</label>
       <div class="mod-form-outline">
- <svg><use></use></svg>
- <input type="text" name="lname" id="lname" placeholder="smith">
+ <svg class="input_icon"><use></use></svg>
+ <input type="tel" name="user_tel" id="user_tel" placeholder="+380 12 345 67 89">
       </div>
-      
-      <label for="name">Pass</label>
+      <label for="user_email">email</label>
       <div class="mod-form-outline">
-<svg><use></use></svg>
-<input type="password" name="pass" id="pass" placeholder="****" required minlength="5" maxlength="12" title="min-5 max-12">
+ <svg class="input_icon"><use></use></svg>
+ <input type="email" name="user_email" id="user_email" placeholder="username@mail.com">
       </div>
+      <label for="comment">comment</label>
+      <textarea name="comment" id="comment" rows="5" required >
+      </textarea>
+      <div class="useragr"><input type="checkbox">
+      <p class="useragr_text">Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a></p>
+    </div>
       
 <button class="submit" type="submit">sub</button>
     </form>
