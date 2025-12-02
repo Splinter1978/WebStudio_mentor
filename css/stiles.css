@@ -240,7 +240,7 @@ background-color: #2196f3;
   margin: 0 auto;
 }
 /* end model */
-.about-us, .our-team,  .we-do-this{
+.about-us, .our-team,  .we_do_this{
   padding-top: 120px;
 }
 .about-us-item {
@@ -279,6 +279,45 @@ content: '';
   padding-bottom: 120px;
 }
 
+li {
+  list-style-type: none;
+}
+.about-us p, .our-team p {
+  font-weight: normal;
+  color: var(--color-gray);
+  line-height: 1.5;
+}
+.about-us ul, .we_do_this ul, .our-team ul, .portfolio-list{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+/* WE_DO_THIS */
+
+.we_do_this-item {
+  position: relative;
+  padding: 0;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.we_do_this-item:hover{
+  box-shadow: 3px 3px 2px rgba(47, 48, 58, 0.4);
+}
+.we_do_this-item p {
+  margin: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-white);
+  background: linear-gradient(0deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+}
+
+/* TEAM */
 .team-card {
 flex: 0 0 270px;
 box-shadow: 
@@ -297,21 +336,6 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 270px;
   background-color: var(--color-lfon);
 }
-li {
-  list-style-type: none;
-}
-.about-us p, .our-team p {
-  font-weight: normal;
-  color: var(--color-gray);
-  line-height: 1.5;
-}
-.about-us ul, .we-do-this ul, .our-team ul, .portfolio-list{
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
 /* PORTFOLIO */
 .portfolio-select {
   max-width: 575px;
