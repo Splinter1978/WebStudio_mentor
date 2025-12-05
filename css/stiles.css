@@ -20,6 +20,7 @@ h2 {
 .container {
   max-width: 1230px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 a, button, .button-selector {
   cursor: pointer;
@@ -103,13 +104,24 @@ transform: scaleX(0);
  animation-delay: 100ms;
   }
 }
+.contact-head { 
+  display: flex;
+  fill: var(--color-gray);
+  color: var(--color-gray);
+  gap: 12px;
+}
+.contact-head-item:hover { 
+  fill: var(--color-blue);
+  color: var(--color-blue);
+}
+.contact-head a {
+  color: inherit;
+}
 
-
-.contact-head > svg {
+.contact-head-item > svg {
   height: 18px;
   width: 18px;
-  fill: var(--color-gray);
-}
+  }
 
 .logo a, .logo a:visited {
   font-family: 'Raleway';
@@ -405,7 +417,8 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   justify-content: center;
 }
 .button-selector {
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 5px;
+  border: 1px solid var(--color-gray);
 }
 .portfolio-item {
   height: 404px;
@@ -420,6 +433,21 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .portfolio-item h3, .portfolio-item p {
   margin-left: 24px;
 }
+
+.overtext {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 294px;
+  background-color: rgba(8, 193, 240, 0.5);
+  transform: scaleY(0);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: bottom center;
+}
+.portfolio-item>img:hover + .overtext, .overtext:hover {
+  transform: scaleY(1);
+}
+
 /* FOOTER */
 footer .container {
   display: flex;
@@ -443,7 +471,7 @@ color: var(--color-white);
   justify-content: center;
   /* align-items: center; */
 height: 48px;
-width: 306px;
+width: 270px;
 margin: 0 auto;
 padding: 0;
 gap: 10px !important;
@@ -481,4 +509,14 @@ footer .social-item
 use {
   margin: 0;
   padding: 0;
+}
+
+.trasit-popup {
+  position: relative;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.trasit-popup:hover {
+  transform: scale(1.2) translate(-5px, -5px);
+  box-shadow: 3px 3px 3px 1px  var(--color-gray);
 }
